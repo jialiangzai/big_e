@@ -36,16 +36,16 @@ function renderAvatar(user) {
     // 欢迎
     //获取用户的昵称或者用户名 逻辑运算
     let name = user.nickname || user.username
-    $('.welcome').html('欢迎' + name)
+    $('.welcome').html('欢迎&nbsp;' + name)
     // 头像 如果没有用户头像会返回null
     if (user.user_pic !== null) {
         // 隐藏文字头像，显示用户头像
         $('.avatar-text').hide()
-        $('.layui-nav-img').show().attr('src', res.data.user_pic)
+        $('.layui-nav-img').show().attr('src', user.user_pic)
     } else {
         $('.layui-nav-img').hide()
         let first = name[0].toUpperCase()
-        $('.avatar-text').show().html(first)
+        $('.avatar-text').show().html(first )
 
     }
 }

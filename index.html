@@ -24,18 +24,18 @@
                     <a href="javascript:;" class="userinfo">
                         <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
                             class="layui-nav-img">
-                            <!-- 文字头像 -->
-                            <span class="avatar-text">A</span>
+                        <!-- 文字头像 -->
+                        <span class="avatar-text"></span>
                         个人中心
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">更换头像</a></dd>
-                        <dd><a href="">重置密码</a></dd>
+                        <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
+                        <dd><a href="/user/user_avatar.html" target="fm">更换头像</a></dd>
+                        <dd><a href="/user/user_pwd.html" target="fm">重置密码</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
-                    <a href="javascript:;">
+                <li class="layui-nav-item" lay-header-event="menuRight" id="logout" lay-unselect>
+                    <a id="logout" href="javascript:;">
                         <span class="iconfont icon-tuichu"></span>
                         退出
                     </a>
@@ -49,15 +49,15 @@
                 <div href="javascript:;" class="userinfo">
                     <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
                         class="layui-nav-img ">
-                        <!-- 文字头像 -->
-                        <span class="avatar-text">A</span>
-                        <span class="welcome" ></span>
+                    <!-- 文字头像 -->
+                    <span class="avatar-text">A</span>
+                    <span class="welcome"></span>
                 </div>
 
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul lay-shrink="all" class="layui-nav layui-nav-tree" lay-filter="test">
                     <!-- layui-this控制迷人选中类名 -->
-                    <li class="layui-nav-item layui-this">
+                    <li class="layui-nav-item ">
                         <!-- a链接的href属性是在本页面跳转，target是在跳转方式，有_self跳转新页面_blank新的空白的页面跳转，可以是框架或者iframe的别名，iframe是一个容器标签，他有src属性表示默认显示的页面，frameborder="0"表示边框大小，默认很丑，name属性表示别名，当a的target和框架或iframe的name一样时候a就可以在iframe标签中跳转  -->
                         <a href="/home/dashboard.html" target="fm">
                             <span class="iconfont icon-home"></span>
@@ -87,15 +87,15 @@
                             <span class="iconfont icon-user"></span>
                             个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;">
+                            <dd><a href="/user/user_info.html" target="fm">
 
                                     <i class="layui-icon layui-icon-app"></i>
                                     基本资料</a></dd>
-                            <dd><a href="javascript:;">
+                            <dd><a href="/user/user_avatar.html" target="fm">
 
                                     <i class="layui-icon layui-icon-app"></i>
                                     更换头像</a></dd>
-                            <dd><a href="javascript:;">
+                            <dd><a href="/user/user_pwd.html" target="fm">
 
                                     <i class="layui-icon layui-icon-app"></i>
                                     重置密码</a></dd>
