@@ -16,16 +16,36 @@ axios.interceptors.request.use(function (config) {
     return config
 }, function (error) {
     return Promise.reject(error)
-    });
-    // 响应拦截器 登录拦截
-    axios.interceptors.response.use(function (response) {
-        // 响应信息
-        // console.log(response.data);
-        if (response.data.message === '身份认证失败！') {
-            localStorage.removeItem('token')
-            location.href = '/login.html'
-        }
-        return response
-    }, function (error) {
-        return Promise.reject(error)
-    })
+});
+// 响应拦截器 登录拦截
+axios.interceptors.response.use(function (response) {
+    // 响应信息
+    // console.log(response.data);
+    if (response.data.message === '身份认证失败！') {
+        localStorage.removeItem('token')
+        location.href = '/login.html'
+    }
+    return response
+}, function (error) {
+    return Promise.reject(error)
+})
+
+
+// 格式化日期
+function formData(tiem) {
+    let dt = new Date(tiem)
+    let y = padZero(dt.getFullYear())
+    let m = padZero(dt.getMonth() + 1)
+    let d = padZero(dt.getDate())
+
+    let hh = padZero(dt.getHours())
+    let mm = padZero(dt.getMinutes())
+    let ss = padZero(dt.getSeconds())
+
+    return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+
+}
+function padZero(n) {
+    return n < 10 ? '0' + n : n
+
+}

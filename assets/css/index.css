@@ -1,6 +1,9 @@
 .bgc{
     background-color: transparent!important;
 }
+a {
+    transition: none!important;
+}
 .layui-footer{
     font-size: 12px;
     text-align: center;
